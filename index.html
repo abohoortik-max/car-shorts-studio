@@ -4,24 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Car Shorts Studio</title>
-<meta name="description" content="Car Shorts Studio helps creators organize and publish short-form automotive video content from a desktop workflow.">
+<meta name="description" content="Car Shorts Studio is a desktop creator workflow for preparing and publishing short-form automotive videos to an authorized TikTok account.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header><div class="wrap"><nav>
 <div class="brand">Car Shorts Studio</div>
-<div><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+<div><a href="index.html">Home</a><a href="#how">How it works</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
 </nav></div></header>
 <main>
 <section class="hero"><div class="wrap">
-<h1>Prepare and publish automotive short videos from one workflow.</h1>
-<p>Car Shorts Studio is a desktop content workflow for organizing short-form automotive videos and publishing content to an account authorized by the creator.</p>
-<a class="button" href="#features">How it works</a>
+<h1>Prepare and publish automotive short videos from a desktop workflow.</h1>
+<p>Car Shorts Studio helps creators prepare short-form automotive clips, connect their own TikTok account, review publishing settings, and send creator-authorized content through TikTok's official Content Posting API.</p>
+<a class="button" href="#how">How it works</a>
 </div></section>
-<section id="features"><div class="wrap grid">
-<div class="card"><h2>Organize</h2><p class="muted">Prepare short-form video files in a consistent workflow before publishing.</p></div>
-<div class="card"><h2>Authorize</h2><p class="muted">Account access is granted through the platform's official authorization flow.</p></div>
-<div class="card"><h2>Publish</h2><p class="muted">Send creator-owned automotive video content using supported publishing APIs.</p></div>
+
+<section id="how"><div class="wrap content">
+<h2>How it works</h2>
+<p><strong>1. Prepare a clip.</strong> A creator selects creator-owned automotive footage and prepares a short MP4 video.</p>
+<p><strong>2. Connect TikTok.</strong> The creator authorizes their TikTok account through TikTok Login using the official OAuth flow.</p>
+<p><strong>3. Review the destination and post settings.</strong> Before a Direct Post request is initialized, the workflow retrieves the latest creator information and available publishing options from TikTok.</p>
+<p><strong>4. Confirm publishing.</strong> The creator reviews the caption, privacy choice, and supported interaction settings, then explicitly confirms the post.</p>
+<p><strong>5. Publish and check status.</strong> The video is uploaded through TikTok's Content Posting API and the workflow checks the publishing status until the request reaches a final state.</p>
+</div></section>
+
+<section><div class="wrap grid">
+<div class="card"><h2>Creator authorization</h2><p class="muted">TikTok access is granted by the creator through TikTok's supported authorization flow. The service does not ask creators to share their TikTok password.</p></div>
+<div class="card"><h2>Publishing controls</h2><p class="muted">The publishing flow uses the destination creator's current privacy and interaction options returned by TikTok before a post is submitted.</p></div>
+<div class="card"><h2>Official API</h2><p class="muted">Publishing uses TikTok's Content Posting API for creator information, Direct Post initialization, media upload, and publishing-status checks.</p></div>
+</div></section>
+
+<section><div class="wrap content">
+<h2>Creator data and control</h2>
+<p>Car Shorts Studio does not sell creator information. Authorization data, video files, captions, and publishing metadata are processed only as needed to provide the requested workflow. Creators can stop using the service and revoke TikTok authorization at any time.</p>
+<p>See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a> for more information.</p>
 </div></section>
 </main>
 <footer><div class="wrap">© 2026 Car Shorts Studio · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></div></footer>
